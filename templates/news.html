@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>News</title>
+</head>
+<body style="padding: 70px">
+<h2>
+    Get to know about anything in your mind!<br> <small> Just search and see the results.</small>
+</h2>
+<form method="post">
+
+    <div style="display: inline-block; width: 30%" ,>
+        <input class="form-control" type="search" autofocus name="topic" placeholder="Any thing in your mind">
+
+    </div>
+    <div style="display: inline-block;">
+        <p><input type="submit" value="submit" class="btn btn-success"></p>
+
+    </div>
+</form>
+
+<table class='table table-hover table-bordered'>{% for items in result %}
+
+    <tr>
+        <td>
+            <h3> {{ items[0] }}<br><small>- {{items[1]}} </small></h3>
+        </td>
+        <td>
+            <img src="
+                  {{items[2]}} " class="img-fluid" style=" max-height: 200px;" alt="Cinque Terre">
+        </td>
+
+
+	</tr>
+
+    {% endfor %}
+</table>
+</body>
+<script>
+	console.log(items)
+
+
+
+</script>
+</html>
